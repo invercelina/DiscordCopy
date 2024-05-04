@@ -15,6 +15,20 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    public void toaster(TextView tv) {
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text;
+                text = tv.getText().toString();
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(MainActivity.this, text, duration);
+                toast.show();
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,100 +36,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView tvnotice = findViewById(R.id.tv_notice);
-        tvnotice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "공지사항";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvnotice);
 
         TextView tvcoworker = findViewById(R.id.tv_coworker);
-        tvcoworker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "동료에게-물어봐";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvcoworker);
 
         TextView tvai = findViewById(R.id.tv_ai);
-        tvai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "인공지능-과정";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvai);
 
         TextView tvapp = findViewById(R.id.tv_app);
-        tvapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "앱-과정";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvapp);
 
         TextView tvproject = findViewById(R.id.tv_project);
-        tvproject.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "프로젝트-과정";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvproject);
 
         TextView tvrecommendation = findViewById(R.id.tv_recommendation);
-        tvrecommendation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "점심-추천해요";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvrecommendation);
 
         TextView tvofftherecord = findViewById(R.id.tv_offtherecord);
-        tvofftherecord.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "오프더레코드";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvofftherecord);
 
         TextView tvshare = findViewById(R.id.tv_share);
-        tvshare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence text = "정보-공유해요";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(MainActivity.this, text, duration);
-                toast.show();
-            }
-        });
+        toaster(tvshare);
 
         TextView tvconfirm = findViewById(R.id.tv_confirm);
 
